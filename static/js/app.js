@@ -15,11 +15,7 @@ function init() {
             opt_name.text(nameData);
         })
 
-        const svalue = select_name.node().value;
-        barchart(svalue);
-        demographic(svalue);
-        bubblechart(svalue);
-        gaugechart(svalue);
+        optionChanged(select_name.node().value);
     })
 }
 
