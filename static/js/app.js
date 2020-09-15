@@ -36,8 +36,8 @@ function demographic(svalue){
 function barchart(svalue){
     const filtered_sample = dataSamples.filter(sdata=>sdata.id==svalue)[0];
     let data = [{
-        x : filtered_sample.sample_values,
-        y : filtered_sample.otu_ids.map(item=>'OTU'.concat(' ', item.toString())),
+        x : filtered_sample.sample_values.slice(0, 10),
+        y : filtered_sample.otu_ids.slice(0,10).map(item=>'OTU'.concat(' ', item.toString())),
         text : filtered_sample.otu_labels,
         type : 'bar',
         orientation : 'h'
